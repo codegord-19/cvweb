@@ -1,0 +1,136 @@
+.cube
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transform-style: preserve-3d;
+    animation: animatec 12s linear infinite;
+    margin: 24px;
+    justify-self: center;
+    cursor: pointer;
+
+}
+
+.contcube
+{
+    display: grid;
+    gap: 60px;
+}
+
+@keyframes animatec
+{
+    0%
+    {
+      transform: rotateX(-30deg) rotateY(0deg) ;
+    }
+    100%
+    {
+      transform: rotateX(-30deg) rotateY(360deg) ;
+    }
+
+}
+
+.cube div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+}
+
+.cube div span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(15px) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cube div span i
+{
+    color: var(--c3);
+    font-size: 24px;
+}
+
+.cube div span p
+{
+    color: var(--c5);
+    font-size: 16px;
+    font-weight: bold;
+    background: var(--c3);
+}
+
+.top
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: var(--clr);
+    transform: rotateX(90deg) translateZ(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top i
+{
+    color: var(--c3);
+    font-size: 24px;
+    
+}
+
+.top p
+{
+    color: var(--c5);
+    font-size: 16px;
+    font-weight: bold;
+    background: var(--c3);
+}
+
+.top::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background:  var(--clr);
+    transform: translateZ(-60px);
+    filter: blur(20px);
+   
+}
+
+.dark .top::before
+{
+    box-shadow: 0 0 120px var(--clr),
+    0 0 200px var(--clr),
+    0 0 300px var(--clr),
+    0 0 400px var(--clr),
+    0 0 500px var(--clr);
+}
+.cube div span img
+{
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+.toplogo
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
